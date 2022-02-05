@@ -1,0 +1,39 @@
+.list-cards {
+    margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.list-cards-buttons {
+    margin: 30px 0px 0px;
+    display: flex;
+    width: 320px;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.list-cards-h2 {
+    color: #212529;
+    font-size: 21px;
+}
+.list-cards ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.list-cards ul h3{
+    margin: 20px 0;
+    font-size: 14px;
+    color: #868E96;
+}
+.list-cards ul figure{
+    width: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.noCard-hidden{
+    display: none;
+}

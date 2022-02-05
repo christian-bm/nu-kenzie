@@ -1,3 +1,5 @@
+import './style.css'
+
 function TotalMoney({listTransactions}) {
     return(
         <div className="totalMoney">

@@ -1,12 +1,19 @@
 import Button from "../Button";
+import Imagem from "../Imagem";
+import "./style.css";
+import NuKenzieBlack from "../../img/nuKenzieBlack.jpg";
 
-function Header({handleIsLoggedin}) {
+function Header({ handleIsLoggedin }) {
 	return (
 		<header>
-			<figure className='header-logo'>
-				<img src = "../../../public/nuKenzieBlack.jpg" alt='Logo Nu Kenzie'/>
-			</figure>
-			<Button onClick={handleIsLoggedin} className='header-button'>Inicio</Button>
+			<Imagem
+				className={"header-logo"}
+				src={NuKenzieBlack}
+				alt={"Logo Nu Kenzie"}
+			/>
+			<Button onClick={handleIsLoggedin} className={"header-button"}>
+				Inicio
+			</Button>
 		</header>
 	);
 }

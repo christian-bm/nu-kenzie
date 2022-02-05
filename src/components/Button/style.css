@@ -1,0 +1,69 @@
+.card-button {
+    display: flex;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 6px;
+    top: 6px;
+    border: transparent solid 1px;
+    background-color: #e9ecef;
+    color: #868e96;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.card-button:hover {
+	background-color: #868e96;
+	color: #e9ecef;
+    transform: scale(105%);
+}
+
+.form-button {
+	width: 100%;
+	height: 40px;
+	border-radius: 8px;
+	border: transparent solid 1px;
+	background-color: #fd377e;
+	color: #fff;
+	font-size: 16px;
+    cursor: pointer;
+}
+.form-button:hover {
+	background-color: #e34981;
+}
+.form-button:active {
+	transform: scale(101%);
+}
+
+.header-button {
+	width: 64px;
+	height: 40px;
+	border: none;
+	color: #868e96;
+	border-radius: 8px;
+	background-color: #e9ecef;
+    cursor: pointer;
+}
+.header-button:hover {
+	background-color: #868e96;
+	color: #f8f9fa;
+}
+.header-button:active {
+	background-color: #fd377e;
+	transform: scale(101%);
+}
+
+.list-button {
+	width: 80px;
+	height: 40px;
+	color: #868e96;
+	background-color: #e9ecef;
+	border: transparent solid 1px;
+	border-radius: 8px;
+    cursor: pointer;
+}
+.list-button:hover {
+	background-color: #868e96;
+	color: #e9ecef;
+}
