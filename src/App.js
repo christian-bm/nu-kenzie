@@ -4,16 +4,19 @@ import Home from './components/Pages/Home';
 import Initial from './components/Pages/Initial';
 
 function App() {
-  const [ listTransactions, setListTrasanctions ] = useState([
-    { description: "Salário recebido", type: "Entrada", value: 2500 },
-    { description: "Conta de luz", type: "Despesa", value: -150 }
-  ])
+  const [ listTransactions, setListTrasanctions ] = useState([])
+  const [isLoggedin, setIsLoggedin] = useState(false)
+  
 
   const handleListTransactions = (transaction) => {
     setListTrasanctions([...listTransactions, transaction])
   }
 
-  const [isLoggedin, setIsLoggedin] = useState(false)
+  const removeTransaction = (transactionId) => {
+    const newListTransactions = listTransactions.filter(({id}) => Number(transactionId) !== id)
+    setListTrasanctions([...newListTransactions])
+  }
+
 
   const handleIsLoggedin = () => {
     setIsLoggedin(!isLoggedin)
@@ -22,7 +25,13 @@ function App() {
   return (
     <>
     {isLoggedin ? 
-    <Home handleIsLoggedin={handleIsLoggedin} listTransactions={listTransactions} setListTrasanctions={setListTrasanctions} handleListTransactions={handleListTransactions}/> 
+    <Home 
+      handleIsLoggedin={handleIsLoggedin} 
+      listTransactions={listTransactions} 
+      setListTrasanctions={setListTrasanctions} 
+      handleListTransactions={handleListTransactions}
+      removeTransaction={removeTransaction}
+    /> 
     : 
     <Initial handleIsLoggedin={handleIsLoggedin}/>}
     </>

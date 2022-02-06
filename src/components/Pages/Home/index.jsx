@@ -1,11 +1,15 @@
 import Header from "../../Header";
 import Main from "../../Main";
 
-function Home({ handleIsLoggedin, listTransactions, handleListTransactions }) {
+function Home({ handleIsLoggedin, listTransactions, handleListTransactions, removeTransaction }) {
 	return (
 		<>
 			<Header handleIsLoggedin={handleIsLoggedin}/>
-			<Main listTransactions={listTransactions} handleListTransactions={handleListTransactions}/>
+			<Main 
+				listTransactions={listTransactions} 
+				handleListTransactions={handleListTransactions}
+				removeTransaction={removeTransaction}			
+			/>
 		</>
 	);
 }

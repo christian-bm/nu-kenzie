@@ -2,15 +2,21 @@ import { useState } from "react";
 import Button from "../Button";
 import "./style.css";
 
-function Form({ handleListTransactions }) {
+function Form({ handleListTransactions, listTransactions }) {
 	const [description, setDescription] = useState("");
 	const [value, setValue] = useState("");
 	const [type, setType] = useState("Entrada");
+
+	const creatId = (list) => {
+		const lastId = list.reduce((newId, {id}) => id > newId ? newId =  id : id,0)
+		return lastId
+	}
 
 	const captureForm = (event) => {
 		event.preventDefault();
 		if (description !== "" && value !== "") {
 			const transaction = {
+				id: creatId(listTransactions) + 1,
 				description: `${description}`,
 				type: `${type}`,
 				value: Number(value),
@@ -41,7 +47,7 @@ function Form({ handleListTransactions }) {
 					value={value}
 					onChange={(e) => setValue(e.target.value)}
 					type='text'
-					placeholder='1 R$'
+					placeholder='1                     R$'
 				/>
 				<select
 					value={type}

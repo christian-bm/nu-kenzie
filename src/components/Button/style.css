@@ -29,10 +29,8 @@
 	font-size: 16px;
     cursor: pointer;
 }
-.form-button:hover {
-	background-color: #e34981;
-}
 .form-button:active {
+	background-color: #e34981;
 	transform: scale(101%);
 }
 
@@ -66,4 +64,19 @@
 .list-button:hover {
 	background-color: #868e96;
 	color: #e9ecef;
+}
+
+.button-initial{
+	width: 250px;
+	height: 40px;
+	background-color: #FD377E;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	cursor: pointer;
+}
+.button-initial:active{
+	background-color: #fd377e;
+	transform: scale(105%);
 }
