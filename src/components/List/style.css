@@ -37,3 +37,36 @@
 .noCard-hidden{
     display: none;
 }
+@media screen and (min-width: 1024px) {
+    .noCard-hidden{
+        display: block;
+    }
+    .list-cards{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 0;
+        width: 562px;
+    }
+    .list-cards ul figure{
+        width: 562px;
+    }
+    .list-cards-h2{
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .list-cards-buttons{
+        margin: 0px;
+        justify-content: space-between;
+        width: 275px;
+    }
+    .list-cards ul{
+        align-items: flex-start;
+    }
+    .list-cards ul h3{
+        font-size: 22px;
+        font-weight: 700;
+        margin: 20px 0px;
+    }
+}

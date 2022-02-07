@@ -80,3 +80,8 @@
 	background-color: #fd377e;
 	transform: scale(105%);
 }
+@media screen and (min-width: 1024px) {
+    .card-button{
+		position: unset;
+	}
+}
